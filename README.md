@@ -1,13 +1,13 @@
 # Find Selection — Extension Chrome / Edge
 
-Recherchez instantanément sur Google n'importe quel texte sélectionné sur une page web.
+Recherchez instantanément sur Google, Bing, DuckDuckGo ou Leboncoin n'importe quel texte sélectionné sur une page web.
 
 ## Fonctionnement
 
 1. Sélectionnez du texte sur n'importe quelle page web.
-2. Faites un **clic droit** sur la sélection.
-3. Cliquez sur **"Rechercher sur Google : '...'"** dans le menu contextuel.
-4. Un nouvel onglet s'ouvre avec les résultats Google.
+2. Cliquez sur l'icône de l'extension dans la barre du navigateur (en haut à droite).
+3. Un menu s'affiche avec plusieurs moteurs de recherche (Google, Bing, DuckDuckGo, Leboncoin).
+4. Cliquez sur le moteur de votre choix pour lancer la recherche dans un nouvel onglet.
 
 ## Installation (mode développeur)
 
@@ -33,7 +33,9 @@ Recherchez instantanément sur Google n'importe quel texte sélectionné sur une
 Find Selection Chrome Extension/
 ├── manifest.json        # Configuration de l'extension (Manifest V3)
 ├── src/
-│   └── background.js    # Service worker : menu contextuel + ouverture onglet
+│   ├── background.js    # Service worker (inactif, tout est dans le popup)
+│   ├── popup.html       # Interface du menu de recherche
+│   └── popup.js         # Logique du menu popup
 ├── icon16.png           # Icône 16×16
 ├── icon48.png           # Icône 48×48
 └── icon128.png          # Icône 128×128
