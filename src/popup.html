@@ -5,22 +5,26 @@
   <title>Recherche sélection</title>
   <style>
     body { font-family: sans-serif; margin: 16px; min-width: 180px; }
-    button { width: 100%; margin: 8px 0; padding: 8px; font-size: 1em; }
+    button { width: 100%; margin: 8px 0; padding: 8px; font-size: 1em; cursor: pointer; }
     #no-selection { color: #888; font-size: 0.95em; margin-top: 10px; }
+    #about-info { word-break: break-all; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 12px 0; }
   </style>
 </head>
 <body>
-  <button id="google">🔎 Google</button>
-  <button id="bing">🔎 Bing</button>
-  <button id="duckduckgo">🔎 DuckDuckGo</button>
-  <button id="leboncoin">🔎 Leboncoin</button>
-  <hr style="margin:12px 0;">
-  <button id="about">À propos</button>
-  <div id="about-info" style="display:none; margin-top:10px; font-size:0.95em; color:#333;">
-    <strong>Nom :</strong> Gregory HARGOUS<br>
-    <strong>Site :</strong> <a href="https://gregland.net" target="_blank">gregland.net</a>
-  </div>
-  <div id="no-selection" style="display:none;">Aucune sélection détectée</div>
+  <main>
+    <button id="google" type="button" aria-label="Rechercher sur Google">🔎 Google</button>
+    <button id="bing" type="button" aria-label="Rechercher sur Bing">🔎 Bing</button>
+    <button id="duckduckgo" type="button" aria-label="Rechercher sur DuckDuckGo">🔎 DuckDuckGo</button>
+    <button id="leboncoin" type="button" aria-label="Rechercher sur Leboncoin">🔎 Leboncoin</button>
+    <hr>
+    <button id="about" type="button" aria-controls="about-info" aria-expanded="false">À propos</button>
+    <div id="about-info" style="display:none; margin-top:10px; font-size:0.95em; color:#333;">
+      <strong>Nom&nbsp;:</strong> Gregory HARGOUS<br>
+      <strong>Site&nbsp;:</strong> <a href="https://gregland.net" target="_blank" rel="noopener noreferrer">gregland.net</a>
+    </div>
+    <div id="no-selection" style="display:none;">Aucune sélection détectée</div>
+  </main>
   <script src="popup.js"></script>
 </body>
 </html>
