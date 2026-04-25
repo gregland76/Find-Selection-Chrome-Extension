@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Recherche sélection</title>
+  <style>
+    body { font-family: sans-serif; margin: 16px; min-width: 180px; }
+    button { width: 100%; margin: 8px 0; padding: 8px; font-size: 1em; }
+    #no-selection { color: #888; font-size: 0.95em; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <button id="google">🔎 Google</button>
+  <button id="bing">🔎 Bing</button>
+  <button id="duckduckgo">🔎 DuckDuckGo</button>
+  <button id="leboncoin">🔎 Leboncoin</button>
+  <hr style="margin:12px 0;">
+  <button id="about">À propos</button>
+  <div id="about-info" style="display:none; margin-top:10px; font-size:0.95em; color:#333;">
+    <strong>Nom :</strong> Gregory HARGOUS<br>
+    <strong>Site :</strong> <a href="https://gregland.net" target="_blank">gregland.net</a>
+  </div>
+  <div id="no-selection" style="display:none;">Aucune sélection détectée</div>
+  <script src="popup.js"></script>
+</body>
+</html>

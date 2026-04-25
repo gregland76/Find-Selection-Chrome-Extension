@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Find Selection",
+  "version": "1.0",
+  "description": "Recherche sur Google le texte sélectionné.",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Recherche sélection",
+    "default_popup": "src/popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
