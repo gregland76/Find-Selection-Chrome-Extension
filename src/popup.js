@@ -17,12 +17,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   const aboutBtn = document.getElementById('about');
   const aboutInfo = document.getElementById('about-info');
     aboutBtn.addEventListener('click', () => {
-      if (aboutInfo.style.display === 'none') {
+      const isOpen = aboutInfo.style.display === '';
+      if (!isOpen) {
         aboutInfo.style.display = '';
         aboutBtn.textContent = 'Fermer';
+        aboutBtn.setAttribute('aria-expanded', 'true');
       } else {
         aboutInfo.style.display = 'none';
         aboutBtn.textContent = 'À propos';
+        aboutBtn.setAttribute('aria-expanded', 'false');
       }
     });
   const noSel = document.getElementById('no-selection');
